@@ -1,0 +1,33 @@
+{
+  "name": "otus-js-context-lapina",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annalui0104/otus-js-context-lapina.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annalui0104/otus-js-context-lapina/issues"
+  },
+  "homepage": "https://github.com/annalui0104/otus-js-context-lapina#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitest/coverage-v8": "^4.1.11",
+    "eslint": "^10.10.0",
+    "globals": "^17.12.0",
+    "husky": "^9.1.7",
+    "vitest": "^4.1.11"
+  }
+}
