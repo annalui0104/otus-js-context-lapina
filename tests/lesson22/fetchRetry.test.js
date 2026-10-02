@@ -160,4 +160,18 @@ describe("fetchRetry", () => {
             fetchRetry("/products", 0, 100),
         ).rejects.toThrow(RangeError);
     });
+
+    test("не принимает отрицательную задержку", async () => {
+        await expect(
+            fetchRetry("/products", 3, -100),
+        ).rejects.toThrow(
+            "Задержка должна быть неотрицательным числом",
+        );
+    });
+
+    test("не принимает некорректную задержку", async () => {
+        await expect(
+            fetchRetry("/products", 3, NaN),
+        ).rejects.toThrow(RangeError);
+    });
 });

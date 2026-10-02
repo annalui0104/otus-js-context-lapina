@@ -1,8 +1,13 @@
-
 export async function fetchRetry(url, retries, delay) {
     if (!Number.isInteger(retries) || retries < 1) {
         throw new RangeError(
             "Количество попыток должно быть положительным целым числом",
+        );
+    }
+
+    if (!Number.isFinite(delay) || delay < 0) {
+        throw new RangeError(
+            "Задержка должна быть неотрицательным числом",
         );
     }
 
